@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+@main// 메인태그 달려있는 것이 제일 먼저 실행되는 엔트리 포인트
 struct basicTutorialApp: App {
     var body: some Scene {
         WindowGroup {
