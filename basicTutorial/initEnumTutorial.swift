@@ -9,43 +9,50 @@ import SwiftUI
 
 struct initEnumTutorial: View {
         
-        let colorBackground : Color
-        let txt : String
-        let numero: Int
+    let colorBackground : Color
+    let targetColor: ColorName
         
  
-        init(count: Int, fruit: Fruits ){
-            
-            self.numero = count
-            
-            if fruit == .banana{
-                self.colorBackground = Color.yellow
-                self.txt = "banana"
-            } else if fruit == .apple{
-                self.colorBackground = Color.red
-                self.txt = "apple"
-            } else{
-                self.colorBackground = Color.purple
-                self.txt = "grape"
-            }
+    init(num: Int){
+        if num % 5 == 0{
+            self.targetColor = .indigo
+            self.colorBackground = .indigo
+        } else if num % 5 == 1{
+            self.targetColor = .teal
+            self.colorBackground = .teal
+        } else if num % 5 == 2{
+            self.targetColor = .mint
+            self.colorBackground = .mint
+        } else if num % 5 == 3{
+            self.targetColor = .pink
+            self.colorBackground = .pink
+        } else{
+            self.targetColor = .yellow
+            self.colorBackground = .yellow
         }
         
-        enum Fruits {
-            case apple, banana, grape
-        }
+    }
+    
+    enum ColorName: String {
+        case indigo = "INDIGO"
+        case teal = "TEAL"
+        case mint = "MINT"
+        case pink = "PINK"
+        case yellow = "YELLOW"
+    }
     
     var body : some View{
         VStack(spacing: 10){
-            Text("\(txt)")
-                .underline()
-            Text("\(numero)")
-               
-            
+            Text(targetColor.rawValue)
+                .font(.title2)
+
         }.frame(width: 150, height: 100)
-         .background(colorBackground)
+         .background(colorBackground )
          .cornerRadius(20)
-         .foregroundColor(Color.white)
-         .font(.headline)
+         //.foregroundColor(Color.white)
+         .padding(5)
+         .opacity(0.6)
+         
     }
         
         
@@ -54,9 +61,21 @@ struct initEnumTutorial: View {
 
 struct initEnumTutorial_Previews: PreviewProvider {
     static var previews: some View {
-        HStack(spacing: 12){
-            initEnumTutorial(count: 58, fruit: .banana)
-            initEnumTutorial(count: 87, fruit: .grape)
+        ScrollView{
+            LazyVStack{
+                ForEach(0..<20){ i in
+                    
+                    ScrollView(.horizontal, showsIndicators: false){
+                        LazyHStack{
+                            ForEach(0..<20){ j in
+                                let randomN = Int.random(in: (0...100))
+                                initEnumTutorial(num: randomN)
+                            }
+                        }
+                    }
+                    
+                }
+            }
         }
         
     }
