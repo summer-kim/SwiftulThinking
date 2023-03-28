@@ -77,6 +77,8 @@ struct initEnumTutorial_Previews: PreviewProvider {
                 }
             }
         }
+        .background(Color.gray.opacity(0.3))
+            .ignoresSafeArea(.all)
         
     }
 }

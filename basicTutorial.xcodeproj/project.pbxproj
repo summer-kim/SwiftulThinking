@@ -12,6 +12,7 @@
 		FA5B5DAD29CB679D003FF034 /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B5DAC29CB679D003FF034 /* FrameBootcamp.swift */; };
 		FA5B5DC929CB755C003FF034 /* stackTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B5DC829CB755C003FF034 /* stackTutorial.swift */; };
 		FA92003829CF6BD100F8B97A /* initEnumTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92003729CF6BD100F8B97A /* initEnumTutorial.swift */; };
+		FA9D285F29D0A4B2003792CD /* buttonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D285E29D0A4B2003792CD /* buttonState.swift */; };
 		FAAB5E7229C8C5F700A47D61 /* basicTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB5E7129C8C5F700A47D61 /* basicTutorialApp.swift */; };
 		FAAB5E7429C8C5F700A47D61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB5E7329C8C5F700A47D61 /* ContentView.swift */; };
 		FAAB5E7629C8C5FC00A47D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAB5E7529C8C5FC00A47D61 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		FA5B5DAC29CB679D003FF034 /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		FA5B5DC829CB755C003FF034 /* stackTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackTutorial.swift; sourceTree = "<group>"; };
 		FA92003729CF6BD100F8B97A /* initEnumTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initEnumTutorial.swift; sourceTree = "<group>"; };
+		FA9D285E29D0A4B2003792CD /* buttonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonState.swift; sourceTree = "<group>"; };
 		FAAB5E6E29C8C5F700A47D61 /* basicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB5E7129C8C5F700A47D61 /* basicTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicTutorialApp.swift; sourceTree = "<group>"; };
 		FAAB5E7329C8C5F700A47D61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				FA5B5DAC29CB679D003FF034 /* FrameBootcamp.swift */,
 				FA5B5DC829CB755C003FF034 /* stackTutorial.swift */,
 				FA92003729CF6BD100F8B97A /* initEnumTutorial.swift */,
+				FA9D285E29D0A4B2003792CD /* buttonState.swift */,
 				FAAB5E7529C8C5FC00A47D61 /* Assets.xcassets */,
 				FAAB5E7729C8C5FC00A47D61 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAB5E7429C8C5F700A47D61 /* ContentView.swift in Sources */,
+				FA9D285F29D0A4B2003792CD /* buttonState.swift in Sources */,
 				FA92003829CF6BD100F8B97A /* initEnumTutorial.swift in Sources */,
 				FAAB5E7229C8C5F700A47D61 /* basicTutorialApp.swift in Sources */,
 				FA5B5DC929CB755C003FF034 /* stackTutorial.swift in Sources */,
