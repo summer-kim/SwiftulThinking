@@ -10,71 +10,85 @@ import SwiftUI
 struct buttonState: View {
     
     @State var myTitle: String = "INDIGO"
-    @State var viewBackground: Color = Color.indigo
+    @State var viewBackground: Color = Color.indigo.opacity(0.7)
     
     var body: some View {
+        
         VStack(spacing: 15){
-            Text("\(myTitle)")
-                .frame(width: 250, height:150)
-                .background(viewBackground)
-                .cornerRadius(20)
-                .foregroundColor(Color.white)
-                .font(.title)
+            
+            bigTitle(myTitle: $myTitle, viewBackground: $viewBackground)
+            
             HStack(spacing: 10){
 //                Button("pink"){
 //                    self.viewBackground = Color.pink.opacity(0.6)
 //                    self.myTitle = "pink".uppercased()
 //                }
                 Button(action: {
-                    self.viewBackground = Color.pink.opacity(0.7)
-                    self.myTitle = "pink".uppercased()
+                    buttonAction(colorTo: Color.pink, colorName: "pink")
                 }) {
-                    Circle()
-                        //.background(Color.white)
-                        .fill(Color.white)
-                        .shadow(color: Color.gray.opacity(0.7), radius: 10)
-                        .frame(width: 50, height: 50)
-                        .overlay {
-                            Image(systemName: "heart.fill")
-                                .font(.title)
-                                .foregroundColor(Color.pink.opacity(0.7))
-                        }
+                    circleButton(buttonColor: Color.pink)
+
                 }
                 Button(action: {
-                    self.viewBackground = Color.teal.opacity(0.7)
-                    self.myTitle = "teal".uppercased()
+                    buttonAction(colorTo: Color.teal, colorName: "teal")
                 }) {
-                    Circle()
-                        //.background(Color.white)
-                        .fill(Color.white)
-                        .shadow(color: Color.gray.opacity(0.7), radius: 10)
-                        .frame(width: 50, height: 50)
-                        .overlay {
-                            Image(systemName: "heart.fill")
-                                .font(.title)
-                                .foregroundColor(Color.teal.opacity(0.7))
-                        }
+                    circleButton(buttonColor: Color.teal)
+
                 }
                 Button(action: {
-                    self.viewBackground = Color.indigo.opacity(0.7)
-                    self.myTitle = "indigo".uppercased()
+                    buttonAction(colorTo: Color.indigo, colorName: "indigo")
                 }) {
-                    Circle()
-                        //.background(Color.white)
-                        .fill(Color.white)
-                        .shadow(color: Color.gray.opacity(0.7), radius: 10)
-                        .frame(width: 50, height: 50)
-                        .overlay {
-                            Image(systemName: "heart.fill")
-                                .font(.title)
-                                .foregroundColor(Color.indigo.opacity(0.7))
-                        }
+                    circleButton(buttonColor: Color.indigo)
                 }
             }
             
         }
     }
+    
+    
+    func buttonAction (colorTo: Color, colorName: String) {
+        self.viewBackground = colorTo.opacity(0.7)
+        self.myTitle = colorName.uppercased()
+    }
 }
+
+struct bigTitle: View{
+    
+    @Binding var myTitle: String
+    @Binding var viewBackground: Color
+
+    var body: some View{
+        Text("\(myTitle)")
+            .frame(width: 250, height:150)
+            .background(viewBackground)
+            .cornerRadius(20)
+            .foregroundColor(Color.white)
+            .font(.title)
+    }
+}
+
+
+struct circleButton: View {
+    
+    var colorVar: Color
+    
+    init(buttonColor: Color) {
+        colorVar = buttonColor
+    }
+    var body: some View{
+        Circle()
+           .fill(Color.white)
+           .shadow(color: Color.gray.opacity(0.7), radius: 10)
+           .frame(width: 50, height: 50)
+           .overlay {
+               Image(systemName: "heart.fill")
+                   .font(.title)
+                   .foregroundColor(colorVar.opacity(0.7))
+           }
+    }
+    
+}
+
 
 struct buttonState_Previews: PreviewProvider {
     static var previews: some View {
