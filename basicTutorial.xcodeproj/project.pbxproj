@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4250D129E9C87B006FB570 /* togglePickerStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4250D029E9C87B006FB570 /* togglePickerStepper.swift */; };
 		FA4F94C529DB458600853266 /* Navi_animationCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F94C429DB458600853266 /* Navi_animationCamp.swift */; };
 		FA5B5DA929C8CF40003FF034 /* textBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B5DA829C8CF40003FF034 /* textBootcamp.swift */; };
 		FA5B5DAB29C8E144003FF034 /* imageBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B5DAA29C8E144003FF034 /* imageBootcamp.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4250D029E9C87B006FB570 /* togglePickerStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = togglePickerStepper.swift; sourceTree = "<group>"; };
 		FA4F94C429DB458600853266 /* Navi_animationCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navi_animationCamp.swift; sourceTree = "<group>"; };
 		FA5B5DA829C8CF40003FF034 /* textBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textBootcamp.swift; sourceTree = "<group>"; };
 		FA5B5DAA29C8E144003FF034 /* imageBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageBootcamp.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				FA9D285E29D0A4B2003792CD /* buttonState.swift */,
 				FA4F94C429DB458600853266 /* Navi_animationCamp.swift */,
 				FAAB5E7529C8C5FC00A47D61 /* Assets.xcassets */,
+				FA4250D029E9C87B006FB570 /* togglePickerStepper.swift */,
 				FAAB5E7729C8C5FC00A47D61 /* Preview Content */,
 			);
 			path = basicTutorial;
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAB5E7429C8C5F700A47D61 /* ContentView.swift in Sources */,
+				FA4250D129E9C87B006FB570 /* togglePickerStepper.swift in Sources */,
 				FA9D285F29D0A4B2003792CD /* buttonState.swift in Sources */,
 				FA92003829CF6BD100F8B97A /* initEnumTutorial.swift in Sources */,
 				FAAB5E7229C8C5F700A47D61 /* basicTutorialApp.swift in Sources */,
